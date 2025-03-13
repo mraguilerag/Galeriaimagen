@@ -1,0 +1,289 @@
+body{
+    display: grid;
+    grid-template-areas: 
+    'menu'
+    'filtros'
+    'principal'
+    'pie'
+    ;
+    margin: 0%;
+    font-family: "Montserrat";
+    min-height: 100vh
+}
+
+nav{
+    grid-area: menu;
+    min-height: 90px;
+    border-bottom: 1px solid #d9bc8b;
+}
+
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: 90px;
+    padding-top: 10px;
+    gap: 12px ;
+}
+
+.logo img{
+    width: 50px;
+    height: 40px;
+}
+.luxe{
+    display: flex;
+    font-size: 20px;
+}
+
+.hamburguer{
+    margin-right: 15px;
+}
+
+.ocultas2{
+    display: none;
+}
+
+.filtros{
+    grid-area: filtros ;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d9bc8b;
+}
+
+.filtros p{
+    font-size: 20px;
+    margin: 0%;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+select{
+    height: 35px;
+    max-width: 80%;
+    border-radius: 8px;
+    border-color: #d9bc8b;
+    margin-bottom: 10px;
+    width: 100%;
+    font-family: "Montserrat";
+}
+
+main{
+    grid-area: principal;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    overflow-y: scroll;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.card:not(:first-child) {
+    display: none;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 15px;
+    border: 1.5px solid #d9bc8b;
+}
+
+.card div{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 0%;
+}
+
+.card h2{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-text{
+    margin: 0%;
+    text-align: center;
+}
+
+.card-price{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.card button {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    width: 200px; 
+    height: 50px; 
+    align-self: center;
+    font-family: "Montserrat";
+    border: 1px solid #d9bc8b;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.paginas{
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+    margin-top: 23px;
+    padding-bottom: 32px;
+}
+
+.paginas button{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    border: 1px solid #d9bc8b;
+    border-radius: 2px;
+}
+
+footer{
+    grid-area: pie;
+    background-color: black;
+    color:white;
+    min-height: 100px;
+    text-align: center;
+    border-top: 0.5px solid #d9bc8b;
+}
+
+.icon{
+    padding-top: 25px;
+}
+
+footer p{
+    margin-top: 0%;
+    padding-bottom: 10px;
+    padding-top: 3px;
+}
+
+.ocultas{
+    display: none;
+}
+
+@media (min-width: 576px) {
+    body{
+        grid-template-rows: auto 1fr auto ;
+        grid-template-columns: 350px 1fr;
+        grid-template-areas: 
+        'menu filtros'
+        'menu principal'
+        'pie principal';
+        height: 100vh;
+    }
+
+    .hamburguer{
+        display: none;
+    }
+
+    nav{
+        border-right: 0.5px solid gray;
+        border-right: 1px solid #d9bc8b;
+    }
+
+    .inicio{
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100vh;
+    }
+
+    .logo{
+        padding-bottom: 5px;
+        padding-top: 15px;
+        justify-content: center;
+        border-bottom: 1.5px solid #d9bc8b;
+        height: 90px;
+        margin: 0%;
+    }
+
+    .logo img{
+        width: 70px;
+        height: 60px;
+    }
+
+    .filtros{
+        height: 90px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    }
+
+    .card{
+        padding-top: 15px;
+        padding-bottom: 7px;
+    }
+
+    .card img{
+        width: 270px;
+        height: 200px;
+    }
+
+    .card div{
+        padding: 0px;
+        padding-top: 20px;
+        width: 270px;
+    }
+
+    .card h2{
+        margin: 0%;
+        font-size: 21px
+    }
+
+    .card-text{
+        padding-top: 10px;
+        font-size: 13px;
+    }
+
+    .card-price{
+        margin: 10px;
+        font-size: 15px;
+    }
+
+    .card button {
+        font-size: 13px;
+        width: 175px; 
+        height: 30px; 
+    }
+
+    .card:nth-child(n) {
+        display: flex;
+    }
+
+    .ocultas2{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    footer{
+        border-right: 1px solid #d9bc8b;
+    }
+}
