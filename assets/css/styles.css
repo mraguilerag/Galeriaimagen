@@ -192,9 +192,9 @@ footer p{
         grid-template-rows: auto 1fr auto ;
         grid-template-columns: 350px 1fr;
         grid-template-areas: 
-        'menu filtros'
         'menu principal'
-        'pie principal';
+        'menu principal'
+        'pie pie';
         height: 100vh;
     }
 
